@@ -6,13 +6,14 @@
 class Game {
   public:
     Game();
-    bool isGameStarted();
+    bool started();
     uint8_t getGameType();
     void setGameType(uint8_t game_type);
-    uint8_t maxScore;
-    int gameTimeout;
+    void setStarted(bool started);
   private:
-    bool _gameStarted;
+    uint8_t _maxScore;
+    int _timeout;
+    bool _started;
     uint8_t _gameType;
 };
 
